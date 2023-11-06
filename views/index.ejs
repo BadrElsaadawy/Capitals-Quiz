@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Awesome CSS Design</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .title {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .input-box {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .submit-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .submit-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title"><%= country%></h1>
+    <h5 class="subtitle">Score: <%= score%></h5>
+
+
+   <form action="/send-answer" method="post">
+
+    <div>
+
+    <input type="text" class="input-box" placeholder="Enter The Capital" name="answer" autofocus autocomplete="off" >
+
+    </div>
+
+  
+    <button type="submit" class="submit-button">Submit
+      <%  if(locals.wascorrect){ %>
+
+        <span class="checkmark">✔</span>
+
+        <%  }  else if (locals.wascorrect === false){%>
+
+        <span class="cross" id="error">✖</span>
+
+
+        <% } %>
+
+    </button>
+
+  </form>
+
+
+  </div>
+</body>
+</html>

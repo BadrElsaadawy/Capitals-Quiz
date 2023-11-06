@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* CSS for the title */
+  .title {
+    font-size: 36px;
+    color: #007BFF;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* CSS for the link */
+  a {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* CSS for the link hover effect */
+  a:hover {
+    background-color: #0056b3;
+  }
+
+  /* CSS for the h3 tag inside the link */
+  a h3 {
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+  <h1 class="title">Your Total Score: <%= score %></h1>
+
+  <a href="http://localhost:3000/">
+    <h3>Back to A New Round</h3>
+  </a>
+</body>
+</html>
